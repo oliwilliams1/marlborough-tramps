@@ -9,6 +9,8 @@ export default function Home() {
         Carousel
       </section>
 
+      <a href="/tramps">View Our Tramps</a>
+
       <section className="h-36 bg-gray-200" />
 
       <section className="h-96 bg-gray-300" ></section>
