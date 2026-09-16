@@ -1,3 +1,4 @@
+import Carousel from "./components/carousel";
 import Header from "./components/header"
 import Footer from "./components/footer"
 
@@ -5,9 +6,7 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <section className="h-[calc(100vh-4rem)]">
-        Carousel
-      </section>
+      <Carousel />
 
       <a href="/tramps">View Our Tramps</a>
 
