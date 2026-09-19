@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.animate-carousel {
+  animation: carousel 20s ease-in-out infinite;
+}
