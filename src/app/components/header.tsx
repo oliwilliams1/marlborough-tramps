@@ -1,6 +1,7 @@
 "use client"
 
 import { usePathname } from "next/navigation";
+import BookTrampModal from "./book_tramp_modal";
 
 export default function Header() {
   const pathname = usePathname();
@@ -14,7 +15,7 @@ export default function Header() {
         <a href="/advice" className={`hover:text-gray-200 ${pathname === '/advice' ? 'text-gray-100' : 'text-gray-300'}`}>Advice</a>
         <a href="/join" className={`hover:text-gray-200 ${pathname === '/join' ? 'text-gray-100' : 'text-gray-300'}`}>Join</a>
       </div>
-      <p>other things</p>
+      <BookTrampModal />
     </header>
   )
 }

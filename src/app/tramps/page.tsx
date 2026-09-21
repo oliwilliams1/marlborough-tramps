@@ -9,13 +9,7 @@ import Header from "../components/header"
 import Footer from "../components/footer"
 import TrampCard from "../components/tramp_card";
 import LargeTrampCard from "../components/large_tramp_card";
-import { TrampCardInfo } from "../utils/types";
-
-const tramps: TrampCardInfo[] = [
-  { name: "Tramp 1", description: "Description for Tramp 1." },
-  { name: "Tramp 2", description: "Description for Tramp 2." },
-  { name: "Tramp 3", description: "Description for Tramp 3." },
-];
+import { tramps } from "../utils/data";
 
 export default function Tramps() {
   const [selectedTramp, setSelectedTramp] = useState<number>(0);
@@ -27,7 +21,6 @@ export default function Tramps() {
       <Header />
         <div className="w-full h-[calc(100vh-4rem)] overflow-hidden" ref={emblaRef}>
           <div className="flex h-full">
-            {/* All slides are a div with a background image */}
             <div className="flex-[0_0_100%] min-w-0 bg-blue-100" />
             <div className="flex-[0_0_100%] min-w-0 bg-blue-300" />
             <div className="flex-[0_0_100%] min-w-0 bg-blue-500" />
