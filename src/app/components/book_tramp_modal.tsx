@@ -81,7 +81,7 @@ export default function BookTrampModal({ defaultView } : BookTrampProps) {
                   name="age"
                   type="number"
                 >
-                  <Label>Age of organiser</Label>
+                  <Label>Age of Organiser</Label>
                   <Input placeholder="21" />
                   <FieldError />
                 </TextField>

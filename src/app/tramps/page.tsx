@@ -42,9 +42,7 @@ export default function Tramps() {
           </div>
           <div className="flex-1 bg-gray-300">info</div>
           <div className="w-[24rem] shrink-0 p-4 flex flex-col gap-4">
-            <LargeTrampCard
-              trampView={selectedTramp}
-            />
+            <LargeTrampCard selectedTramp={selectedTramp} />
           </div>
         </section>
       <Footer />

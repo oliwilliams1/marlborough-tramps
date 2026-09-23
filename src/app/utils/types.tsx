@@ -1,3 +1,4 @@
 export interface TrampCardInfo {
-  selectedTramp: number;
+  name: string;
+  description: string;
 }
