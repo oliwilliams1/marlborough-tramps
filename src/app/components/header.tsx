@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import BookTrampModal from "./book_tramp_modal";
+import { links } from "../utils/data"
 
 export default function Header() {
   const pathname = usePathname();
@@ -36,13 +37,6 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const links = [
-    { name: "Home", href: "/" },
-    { name: "Tramps", href: "/tramps" },
-    { name: "Advice", href: "/advice" },
-    { name: "Join", href: "/join" },
-  ];
 
   return (
     <header
