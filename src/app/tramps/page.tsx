@@ -19,7 +19,7 @@ export default function Tramps() {
   return (
     <main>
       <Header />
-        <div className="w-full h-[calc(100vh-4rem)] overflow-hidden" ref={emblaRef}>
+        <div className="w-full h-[100vh] overflow-hidden" ref={emblaRef}>
           <div className="flex h-full">
             <div className="flex-[0_0_100%] min-w-0 bg-blue-100" />
             <div className="flex-[0_0_100%] min-w-0 bg-blue-300" />

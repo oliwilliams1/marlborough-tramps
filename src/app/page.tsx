@@ -13,7 +13,7 @@ export default function Home() {
     <main>
       <Header />
 
-      <div className="w-full h-[calc(100vh-4rem)] overflow-hidden" ref={emblaRef}>
+      <div className="w-full h-[100vh] overflow-hidden" ref={emblaRef}>
         <div className="flex h-full">
           {/* All slides are a div with a background image */}
           <div className="flex-[0_0_100%] min-w-0 bg-blue-100" />
