@@ -51,7 +51,7 @@ export default function Header() {
     >
       <div className="w-full max-w-[1200px] mx-auto flex items-center justify-between p-2">
         <Link href="/">
-          <Image src="/logo_crop.webp" alt="logo" width={150} height={150} className="mx-auto sm:mx-0"/>
+          <Image src="/logo_crop.webp" alt="logo" loading="eager" width={108} height={108} className="mx-auto sm:mx-0 w-auto h-auto"/>
         </Link>
 
         <nav className="hidden md:flex space-x-4">

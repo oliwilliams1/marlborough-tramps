@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="w-full bg-gray-800 pt-16 pb-10">
       <div className="flex flex-col sm:flex-row max-w-[1200px] w-full px-16 mx-auto">
         <div className="w-full sm:w-1/2 text-white flex flex-col justify-center items-start">
-          <Image src="/logo.webp" alt="logo" width={192} height={192} className="mx-auto sm:mx-0"/>
+          <Image src="/logo.webp" alt="logo" loading="eager" width={192} height={192} className="mx-auto sm:mx-0 w-auto h-auto"/>
 
           <br />
         

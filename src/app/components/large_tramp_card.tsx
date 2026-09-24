@@ -11,7 +11,7 @@ export default function LargeTrampCard({ selectedTramp }: LargeTrampCardProps) {
     <Card>
       <Card.Header>
         <Card.Title>{tramps[selectedTramp].name}</Card.Title>
-        <Card.Description>{tramps[selectedTramp].description}</Card.Description>
+        <Card.Description className="whitespace-pre-line text-sm leading-relaxed">{tramps[selectedTramp].longDescription}</Card.Description>
       </Card.Header>
       <Card.Content />
       <Card.Footer>
