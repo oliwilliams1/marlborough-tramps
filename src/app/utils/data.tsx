@@ -40,3 +40,24 @@ export const links = [
   { name: "Advice", href: "/advice" },
   { name: "Join", href: "/join" },
 ];
+
+export const gearPersonalEquipmentList = [
+    "Backpack – 40–60 litre size for multi-day hiking",
+    "Waterproof or plastic pack liner",
+    "Sleeping bag – 3–4 season",
+    "First aid kit including blister treatment materials",
+    "Map and compass",
+    "Head torch/flashlight and spare batteries",
+    "Rubbish bag – all rubbish must be taken out with you",
+    "Distress beacon",
+    "Survival kit including survival blanket, whistle, paper, pencil, high energy snack food",
+    "Emergency shelter"
+]
+
+export const gearCookingEquipmentList = [
+  "Drink bottle – 1–2 litre capacity – you may need to carry more depending on resupply options",
+  "Equipment to boil water or water treatment tablets",
+  "Gas cooker and fuel, for example, gas canister",
+  "Eating and cooking utensils",
+  "Matches or lighter in waterproof container"
+]

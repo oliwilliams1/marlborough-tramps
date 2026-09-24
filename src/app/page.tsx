@@ -16,7 +16,7 @@ export default function Home() {
       <div className="w-full h-[100vh] overflow-hidden" ref={emblaRef}>
         <div className="flex h-full">
           {/* All slides are a div with a background image */}
-          <div className="flex-[0_0_100%] min-w-0 bg-blue-100" />
+          <div className="flex-[0_0_100%] min-w-0 bg-blue-100 bg-[url('/landscape.webp')] bg-cover bg-center" />
           <div className="flex-[0_0_100%] min-w-0 bg-blue-300" />
           <div className="flex-[0_0_100%] min-w-0 bg-blue-500" />
           <div className="flex-[0_0_100%] min-w-0 bg-blue-700" />
