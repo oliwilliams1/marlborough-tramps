@@ -35,6 +35,7 @@ export default function Tramps() {
                 key={tramp.name}
                 name={tramp.name}
                 description={tramp.description}
+                longDescription={tramp.longDescription}
                 onClick={() => setSelectedTramp(index)}
                 selected={selectedTramp === index}
               />

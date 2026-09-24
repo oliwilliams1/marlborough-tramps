@@ -1,14 +1,20 @@
 "use client"
 
+import { useState } from "react";
+
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
 import Header from "./components/header"
 import Footer from "./components/footer"
+import { Tabs } from "@heroui/react"
+
+import { tramps } from "./utils/data";
 
 export default function Home() {
   const [emblaRef] = useEmblaCarousel({loop: false, duration: 50}, [Autoplay({delay: 7500})])
-
+  const [currentTramp, setCurrentTramp] = useState<number>(0);
+  
   return (
     <main>
       <Header />
@@ -23,11 +29,27 @@ export default function Home() {
         </div>
       </div>
 
-      <a href="/tramps">View Our Tramps</a>
-
       <section className="h-36 bg-gray-200" />
 
-      <section className="h-96 bg-gray-300" ></section>
+      <section className="h-96 bg-gray-300 p-8" >
+        <Tabs className="h-full" orientation="vertical">
+          <Tabs.ListContainer>
+            <Tabs.List className="w-48 align-middle" aria-label="Options">
+              {tramps.map((tramp, index) => (
+                <Tabs.Tab id={index} key={index}>
+                  {tramp.name}
+                  <Tabs.Indicator />
+                </Tabs.Tab>
+              ))}
+            </Tabs.List>
+          </Tabs.ListContainer>
+          {tramps.map((tramp, index) => (
+            <Tabs.Panel className="pt-4" id={index} key={index}>
+              <p>{tramp.description}</p>
+            </Tabs.Panel>
+          ))}
+        </Tabs>
+      </section>
 
       <section className="h-96 bg-gray-200" ></section>
 
