@@ -45,6 +45,7 @@ export default function Header() {
       className={`
         fixed top-0 left-0 z-50 w-full
         bg-gray-800 text-white
+        border-b border-gray-700
         transition-transform duration-300
         ${visible ? "translate-y-0" : "-translate-y-full"}
       `}

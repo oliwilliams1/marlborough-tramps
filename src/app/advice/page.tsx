@@ -36,7 +36,7 @@ export default function Tramps() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-16">
+      <section className="mx-auto max-w-6xl px-6 pb-16">
         <div className="space-y-12">
           <div className="flex w-full gap-8">
             <Card>

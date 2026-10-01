@@ -30,7 +30,7 @@ export default function Home() {
         </div>
 
       <main>
-        <section className="py-10">
+        <section className="py-10 border-b border-gray-200">
           <div className="mx-auto max-w-6xl px-6">
             <h2 className="text-xl font-bold mb-4">About</h2>
             <p>lorem ipsum dolor sit amet consectetur adipiscing elit dolore non amet expedita nulla vel soluta dolorum cumque quo eos voluptate officia exercitation distinctio veniam voluptate dolore elit omnis quo omnis et deleniti culpa dolores facere enim velit est facilis lorem ut et labore sunt omnis nobis qui duis cum eiusmod distinctio est voluptatum dolor eum qui nostrud id id animi esse harum blanditiis corrupti cillum quod nam quod excepturi id placeat expedita facere placeat quo consequat excepturi molestias fugiat est et esse quos libero pariatur officia deserunt sunt maxime dolor pariatur ducimus culpa.</p>
@@ -38,7 +38,7 @@ export default function Home() {
         </section>
 
         <section className="bg-gray-100 p-8">
-          <div className="mx-auto max-w-6xl px-6">
+          <div className="mx-auto max-w-6xl px-6 h-42 max-h-48">
             <Tabs className="h-full flex flex-row" orientation="vertical">
               <div className="flex flex-col gap-4">
                 <Tabs.ListContainer>
@@ -51,11 +51,16 @@ export default function Home() {
                     ))}
                   </Tabs.List>
                 </Tabs.ListContainer>
-                <Button>Learn more about tramps</Button>
+
+                <Button size="sm" className="mx-auto flex justify-center">
+                  <a href="/advice">
+                    Learn more about tramps
+                  </a>
+                </Button>
               </div>
 
               {tramps.map((tramp, index) => (
-                <Tabs.Panel className="h-full" id={index} key={index}>
+                <Tabs.Panel className="h-full p-0 pb-2" id={index} key={index}>
                   <Card className="h-full">
                     <Card.Header>
                       <Card.Title>{tramp.name}</Card.Title>
@@ -87,7 +92,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="py-10">
+        <section className="py-10 border-t border-gray-200">
           <div className="mx-auto max-w-6xl px-6">
             <h2 className="text-xl font-bold mb-4">Tramping Advice</h2>
             <div className="flex w-full gap-8">
@@ -115,13 +120,15 @@ export default function Home() {
               <div className="w-192 aspect-[4/3] overflow-hidden rounded-2xl bg-gray-200 shadow-sm lg:block"></div>
             </div>
 
-            <a href="/advice" className="flex justify-center mt-8">
-              <Button size="lg">Further Advice</Button>
-            </a>
+            <Button size="lg" className="flex justify-center mt-8">
+              <a href="/advice" >
+              Further Advice
+              </a>
+            </Button>
           </div>
         </section>
 
-        <section className="h-96 bg-gray-200">
+        <section className="h-96 bg-gray-100 border-t border-gray-200">
           <div className="mx-auto max-w-6xl px-6">
             Join-us placeholder
           </div>
