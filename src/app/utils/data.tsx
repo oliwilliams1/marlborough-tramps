@@ -29,9 +29,27 @@ Walking Time: Lagoon loop track from car park 3 hour circuit (8km) Plus side-tra
 Grade: Walking track — virtually flat (not recommended after heavy rain as surface water can be ankle deep in places, nor in very hot or windy weather as this is an extremely exposed area).`;
 
 export const tramps: TrampCardInfo[] = [
-  { name: "Nydia Track", description: "Description for Tramp 1.", longDescription: nydiaTrackText },
-  { name: "Quail Stream", description: "Description for Tramp 2.", longDescription: quailStreamText },
-  { name: "Wairau Lagoons", description: "Description for Tramp 3.", longDescription: wairauLagoonsText },
+  {
+    name: "Nydia Track",
+    description: "Description for Tramp 1.",
+    longDescription: nydiaTrackText,
+    difficulty: "Medium",
+    distanceKm: 8.5
+  },
+  {
+    name: "Quail Stream",
+    description: "Description for Tramp 2.",
+    longDescription: quailStreamText,
+    difficulty: "Medium",
+    distanceKm: 8.5
+  },
+  {
+    name: "Wairau Lagoons",
+    description: "Description for Tramp 3.",
+    longDescription: wairauLagoonsText,
+    difficulty: "Easy",
+    distanceKm: 7
+  }
 ];
 
 export const links = [

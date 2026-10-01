@@ -4,6 +4,8 @@ export interface TrampCardInfo {
   name: string;
   description: string;
   longDescription: string;
+  difficulty: 'Easy' | 'Medium' | 'Hard';
+  distanceKm: number;
 }
 
 export type IconSvgProps = SVGProps<SVGSVGElement> & {
