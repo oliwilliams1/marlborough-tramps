@@ -1,9 +1,6 @@
 import Header from "../components/header"
 import Footer from "../components/footer"
-import {
-  gearPersonalEquipmentList,
-  gearCookingEquipmentList,
-} from "../utils/data"
+import { gearPersonalEquipmentList, gearCookingEquipmentList } from "../utils/data"
 import { Card } from "@heroui/react"
 
 export default function Tramps() {
