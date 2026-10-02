@@ -22,10 +22,10 @@ export default function Home() {
          <div className="w-full h-[100vh] overflow-hidden" ref={emblaRef}>
           <div className="flex h-full">
             {/* All slides are a div with a background image */}
-            <div className="flex-[0_0_100%] min-w-0 bg-blue-100 bg-[url('/landscape.webp')] bg-cover bg-center" />
-            <div className="flex-[0_0_100%] min-w-0 bg-blue-300" />
-            <div className="flex-[0_0_100%] min-w-0 bg-blue-500" />
-            <div className="flex-[0_0_100%] min-w-0 bg-blue-700" />
+            <img className="flex-[0_0_100%] min-w-0 object-cover object-center" src="/1.webp" alt="Trail" />
+            <img className="flex-[0_0_100%] min-w-0 object-cover object-center" src="/2.webp" alt="Landscape" />
+            <img className="flex-[0_0_100%] min-w-0 object-cover object-center" src="/3.webp" alt="Trail enterance" />
+            <img className="flex-[0_0_100%] min-w-0 object-cover object-center" src="/4.webp" alt="Overlook pond" />
           </div>
         </div>
 
@@ -151,7 +151,7 @@ export default function Home() {
                 </Card.Content>
               </Card>
 
-              <div className="w-full aspect-[4/3] rounded-2xl bg-gray-200 shadow-sm md:w-2/5 md:shrink-0" />
+              <img src="6.webp" alt="Cooking Equipment" className="w-132 rounded-2xl object-cover object-center shadow-sm lg:block" />
             </div>
 
             <Button size="lg" className="w-full sm:w-fit flex justify-center mt-6 sm:mt-8">

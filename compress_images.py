@@ -1,7 +1,7 @@
 import os
 from PIL import Image
 
-def convert_images_to_webp(directory, max_width=800, quality=80):
+def convert_images_to_webp(directory, max_width=2560, quality=80):
     if not os.path.exists(directory):
         print("Directory does not exist.")
         return
@@ -29,4 +29,4 @@ def convert_images_to_webp(directory, max_width=800, quality=80):
 
 target_directory = "public/"
 
-convert_images_to_webp(target_directory, max_width=800, quality=80)
+convert_images_to_webp(target_directory, max_width=2560, quality=80)

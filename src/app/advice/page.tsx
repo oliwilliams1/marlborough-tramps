@@ -56,12 +56,11 @@ export default function Tramps() {
               </Card.Content>
             </Card>
 
-            <div className="w-192 aspect-[4/3] overflow-hidden rounded-2xl bg-gray-200 shadow-sm lg:block"></div>
+            <img src="EQ-1.webp" alt="Personal Equipment" className="w-96 rounded-2xl object-cover object-center shadow-sm lg:block" />
           </div>
 
           <div className="flex w-full gap-8">
-            <div className="w-192 aspect-[4/3] overflow-hidden rounded-2xl bg-gray-200 shadow-sm lg:block"></div>
-            
+            <img src="EQ-2.webp" alt="Cooking Equipment" className="w-96 rounded-2xl object-cover object-center shadow-sm lg:block" />
             <Card>
               <Card.Title>
                 Cooking Equipment

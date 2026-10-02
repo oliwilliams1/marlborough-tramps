@@ -9,12 +9,19 @@ interface TrampCardProps {
 
 export default function TrampCard({ tramp, onClick, selected }: TrampCardProps) {
   return (
-    <Card className="h-full" onClick={onClick}>
+    <Card className="h-full w-full min-h-0 overflow-hidden" onClick={onClick}>
       <Card.Header>
         <Card.Title>{tramp.name}</Card.Title>
         <Card.Description>{tramp.description}</Card.Description>
       </Card.Header>
-      <Card.Content></Card.Content>
+
+      <Card.Content className="min-h-0 flex-1">
+        <img
+          className="h-full w-full object-cover rounded-xl"
+          src={tramp.images[0]}
+          alt={tramp.name}
+        />
+      </Card.Content>
       <Card.Footer className="gap-2">
         <Chip className={
           tramp.difficulty === "Easy"

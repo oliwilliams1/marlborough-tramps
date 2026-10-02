@@ -31,8 +31,14 @@ export default function Tramps() {
         {/* Tramp information */}
         <section className="relative flex w-full h-[calc(100vh-6rem)]">
 
-          {/* Left: tramp cards */}
-          <div className="w-full lg:w-[24rem] p-4 flex flex-col gap-4">
+          {/* Left cards */}
+          <div
+            className="h-full shrink-0 grid grid-rows-3 gap-4 p-4"
+            style={{
+              ["--card-h" as string]: "calc((100vh - 6rem - 4rem) / 3)",
+              width: "calc(var(--card-h) * 1.2 + 2rem)",
+            }}
+          >
             {tramps.map((tramp, index) => (
               <TrampCard
                 key={tramp.name}
@@ -43,14 +49,13 @@ export default function Tramps() {
             ))}
           </div>
 
-          {/* Middle: information */}
+          {/* Information */}
           <div className="flex-1 bg-gray-300 hidden lg:block">
             info
           </div>
 
-          {/* Desktop overlay */}
-          <div className="hidden lg:block absolute top-4 right-4 z-10
-            w-full max-w-sm max-h-[calc(100%-2rem)] overflow-y-auto">
+          {/* Large card */}
+          <div className="hidden lg:block absolute top-4 right-4 z-10 w-full max-w-sm">
             <LargeTrampCard selectedTramp={selectedTramp} />
           </div>
 

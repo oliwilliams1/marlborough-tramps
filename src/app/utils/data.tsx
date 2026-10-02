@@ -38,6 +38,11 @@ export const tramps: TrampCardInfo[] = [
     keyFeatures: [
       "Great views and varied track conditions",
       "Overnight stop at Nydia Bay",
+    ],
+    images: [
+      "NYD-1.webp",
+      "NYD-2.webp",
+      "NYD-3.webp",
     ]
   },
   {
@@ -49,6 +54,11 @@ export const tramps: TrampCardInfo[] = [
     keyFeatures: [
       "Moderately challenging route",
       "Average completion time of 2 h 43 min",
+    ],
+    images: [
+      "QUA-1.webp",
+      "QUA-2.webp",
+      "QUA-3.webp",
     ]
   },
   {
@@ -60,6 +70,11 @@ export const tramps: TrampCardInfo[] = [
     keyFeatures: [
       "Richness and unique beauty of a large estuary",
       "Many species of birds nest here",
+    ],
+    images: [
+      "WAI-1.webp",
+      "WAI-2.webp",
+      "WAI-3.webp",
     ]
   }
 ];
