@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Modal, Button, TextField, Form, Tabs, Label, Input, FieldError } from "@heroui/react";
+import { Modal, Button, TextField, Form, Tabs, Label, Input, FieldError, Separator } from "@heroui/react";
 import { tramps } from "../utils/data";
 
 interface BookTrampProps {
@@ -8,13 +8,11 @@ interface BookTrampProps {
 }
 
 export default function BookTrampModal({ defaultView } : BookTrampProps) {
-  const [currentTramp, setCurrentTramp] = useState<number>(defaultView || 0);
-
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const data: Record<string, string> = {};
-    // Convert FormData to plain object
+
     formData.forEach((value, key) => {
       data[key] = value.toString();
     });
@@ -25,14 +23,14 @@ export default function BookTrampModal({ defaultView } : BookTrampProps) {
     <Modal>
       <Button>Book Tramp</Button>
       <Modal.Backdrop>
-        <Modal.Container size="md">
+        <Modal.Container size="lg">
           <Modal.Dialog>
             <Modal.CloseTrigger />
             <Modal.Header>
               Book Tramp
             </Modal.Header>
             <Modal.Body>
-              <Tabs className="w-full max-w-md">
+              <Tabs className="w-full" variant="secondary" defaultSelectedKey={defaultView || 0}>
                 <Tabs.ListContainer>
                   <Tabs.List aria-label="Options">
                     {tramps.map((tramp, index) => (
@@ -49,8 +47,10 @@ export default function BookTrampModal({ defaultView } : BookTrampProps) {
                   </Tabs.Panel>
                 ))}
               </Tabs>
+
+              <Separator className="my-4" />
               
-              <Form className="flex w-96 flex-col gap-4" onSubmit={onSubmit}>
+              <Form className="flex flex-col gap-4" onSubmit={onSubmit}>
                 <TextField
                   isRequired
                   name="Name"
@@ -86,8 +86,9 @@ export default function BookTrampModal({ defaultView } : BookTrampProps) {
                   <FieldError />
                 </TextField>
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 w-full">
                   <TextField
+                    className="w-full"
                     isRequired
                     name="adults"
                   >
@@ -97,6 +98,7 @@ export default function BookTrampModal({ defaultView } : BookTrampProps) {
                   </TextField>
 
                   <TextField
+                    className="w-full"
                     isRequired
                     name="children"
                   >

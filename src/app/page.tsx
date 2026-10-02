@@ -41,7 +41,6 @@ export default function Home() {
           <div className="mx-auto max-w-2xl px-6">
             <h2 className="text-xl font-bold mb-4">View our tramps</h2>
             <Tabs className="w-full" orientation="horizontal">
-
               <Tabs.ListContainer>
                 {/* Desktop: horizontal */}
                 <Tabs.List

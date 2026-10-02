@@ -8,7 +8,7 @@ interface LargeTrampCardProps {
 }
 
 export default function LargeTrampCard({ selectedTramp }: LargeTrampCardProps) {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   const tramp = tramps[selectedTramp];
 
@@ -16,7 +16,7 @@ export default function LargeTrampCard({ selectedTramp }: LargeTrampCardProps) {
     <Card className="
       w-full
       border border-white/40
-      bg-white/20
+      bg-white/40
       backdrop-blur-2xl
       shadow-0
       rounded-2xl
@@ -27,7 +27,7 @@ export default function LargeTrampCard({ selectedTramp }: LargeTrampCardProps) {
         </Card.Title>
 
         <div className="flex shrink-0 items-center gap-2">
-          <BookTrampModal />
+          <BookTrampModal defaultView={selectedTramp} />
 
           <button
             type="button"
@@ -57,7 +57,7 @@ export default function LargeTrampCard({ selectedTramp }: LargeTrampCardProps) {
       {expanded && (
         <>
           <Card.Content className="border-t border-white/30 p-4">
-            <Card.Description className="whitespace-pre-line text-sm leading-relaxed">
+            <Card.Description className="whitespace-pre-line text-sm leading-relaxed text-black/80">
               {tramp.longDescription}
             </Card.Description>
           </Card.Content>
