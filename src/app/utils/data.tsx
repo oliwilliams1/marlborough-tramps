@@ -34,21 +34,33 @@ export const tramps: TrampCardInfo[] = [
     description: "Description for Tramp 1.",
     longDescription: nydiaTrackText,
     difficulty: "Medium",
-    distanceKm: 8.5
+    distanceKm: 8.5,
+    keyFeatures: [
+      "Great views and varied track conditions",
+      "Overnight stop at Nydia Bay",
+    ]
   },
   {
     name: "Quail Stream",
     description: "Description for Tramp 2.",
     longDescription: quailStreamText,
     difficulty: "Medium",
-    distanceKm: 8.5
+    distanceKm: 8.5,
+    keyFeatures: [
+      "Moderately challenging route",
+      "Average completion time of 2 h 43 min",
+    ]
   },
   {
     name: "Wairau Lagoons",
     description: "Description for Tramp 3.",
     longDescription: wairauLagoonsText,
     difficulty: "Easy",
-    distanceKm: 7
+    distanceKm: 7,
+    keyFeatures: [
+      "Richness and unique beauty of a large estuary",
+      "Many species of birds nest here",
+    ]
   }
 ];
 

@@ -33,9 +33,7 @@ export default function Tramps() {
             {tramps.map((tramp, index) => (
               <TrampCard
                 key={tramp.name}
-                name={tramp.name}
-                description={tramp.description}
-                longDescription={tramp.longDescription}
+                tramp={tramp}
                 onClick={() => setSelectedTramp(index)}
                 selected={selectedTramp === index}
               />
