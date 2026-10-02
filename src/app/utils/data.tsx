@@ -68,7 +68,6 @@ export const links = [
   { name: "Home", href: "/" },
   { name: "Tramps", href: "/tramps" },
   { name: "Advice", href: "/advice" },
-  { name: "Join", href: "/join" },
 ];
 
 export const gearPersonalEquipmentList = [

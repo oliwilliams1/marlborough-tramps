@@ -162,12 +162,6 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="h-96 bg-gray-100 border-t border-gray-200">
-          <div className="mx-auto max-w-6xl px-6">
-            Join-us placeholder
-          </div>
-        </section>
-
       </main>
       <Footer />
     </>

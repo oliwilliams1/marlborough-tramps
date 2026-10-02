@@ -8,17 +8,12 @@ export default function Tramps() {
     <main className="min-h-screen bg-gray-50 text-gray-900">
       <Header />
 
-      <section className="bg-gray-800 px-6 py-16 text-center text-white">
+      <section className="bg-gray-800 px-6 pt-20 py-16 text-center text-white">
 
         <h1 className="mt-8 text-4xl font-bold tracking-tight sm:text-5xl">
-          Gear List
+          Advice
         </h1>
 
-        <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-300 sm:text-lg">
-          Everything you should consider bringing on a Marlborough tramp.
-          Pack light, prepare for changing weather, and make sure you have
-          everything you need before heading into the hills.
-        </p>
       </section>
 
       {/* Intro */}
@@ -103,7 +98,6 @@ export default function Tramps() {
           </p>
         </div>
       </section>
-
       <Footer />
     </main>
   )
