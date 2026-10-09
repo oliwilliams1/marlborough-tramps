@@ -33,8 +33,8 @@ export default function Tramps() {
 
       <section className="mx-auto max-w-6xl px-6 pb-16">
         <div className="space-y-12">
-          <div className="flex w-full gap-8">
-            <Card>
+          <div className="flex w-full flex-col gap-8 lg:flex-row">
+            <Card className="min-w-0 flex-1">
               <Card.Title>
                 Personal Equipment
               </Card.Title>
@@ -43,25 +43,25 @@ export default function Tramps() {
               </Card.Description>
               <Card.Content>
                 <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
-                {gearPersonalEquipmentList.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3 text-gray-700"
-                  >
-                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gray-700" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+                  {gearPersonalEquipmentList.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3 text-gray-700"
+                    >
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gray-700" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </Card.Content>
             </Card>
 
-            <img src="EQ-1.webp" alt="Personal Equipment" className="w-96 rounded-2xl object-cover object-center shadow-sm lg:block" />
+            <img src="EQ-1.webp" alt="Personal Equipment" className="w-full rounded-2xl object-cover object-center shadow-sm lg:w-96" />
           </div>
 
-          <div className="flex w-full gap-8">
-            <img src="EQ-2.webp" alt="Cooking Equipment" className="w-96 rounded-2xl object-cover object-center shadow-sm lg:block" />
-            <Card>
+          <div className="flex w-full flex-col gap-8 lg:flex-row">
+            <img src="EQ-2.webp" alt="Cooking Equipment" className="w-full rounded-2xl object-cover object-center shadow-sm lg:w-96" />
+            <Card className="min-w-0 flex-1">
               <Card.Title>
                 Cooking Equipment
               </Card.Title>
@@ -70,34 +70,22 @@ export default function Tramps() {
               </Card.Description>
               <Card.Content>
                 <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
-                {gearCookingEquipmentList.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3 text-gray-700"
-                  >
-                    <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gray-700" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+                  {gearCookingEquipmentList.map((item, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-3 rounded-lg bg-gray-50 px-4 py-3 text-gray-700"
+                    >
+                      <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-gray-700" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </Card.Content>
             </Card>
           </div>
         </div>
       </section>
 
-      <section className="border-t border-gray-200 bg-white px-6 py-12">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-xl font-bold">
-            Check the conditions before you leave
-          </h2>
-
-          <p className="mt-3 leading-7 text-gray-600">
-            Weather in the Marlborough ranges can change quickly. Always check the forecast and track conditions, and adjust your gear accordingly. For longer or more remote trips, consider what you would need if your plans changed unexpectedly.
-          </p>
-        </div>
-      </section>
-      
       <Footer />
     </main>
   )

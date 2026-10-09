@@ -64,16 +64,15 @@ export default function Tramps() {
         <section className="relative flex w-full h-[calc(100vh-6rem)]">
           {/* Left cards */}
           <div
-            className="h-full shrink-0 grid grid-rows-3 gap-4 p-4"
+            className="h-full shrink-0 grid grid-rows-3 gap-4 p-4 w-full max-w-full lg:w-[calc(var(--card-h)*1.2+2rem)]"
             style={{
               ["--card-h" as string]: "calc((100vh - 6rem - 4rem) / 3)",
-              width: "calc(var(--card-h) * 1.2 + 2rem)",
             }}
           >
             {tramps.map((tramp, index) => (
               <TrampCard
                 key={tramp.name}
-                tramp={tramp}
+                tramp={index}
                 onClick={() => updateSelectedTramp(index)}
                 selected={selectedTramp === index}
               />
@@ -81,7 +80,7 @@ export default function Tramps() {
           </div>
 
           {/* My own carasoul */}
-          <div className="flex w-full h-full z-1">
+          <div className="hidden lg:block flex w-full h-full z-1">
             <div className="w-full h-full z-1 bg-[rgb(8,4,4)]">
               <div className="w-full h-full overflow-hidden">
                 {/* A wide div that scrolls by based on the current index */}

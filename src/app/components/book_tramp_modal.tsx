@@ -7,6 +7,7 @@ import { tramps } from "../utils/data";
 
 interface BookTrampProps {
   defaultView?: number;
+  className?: string;
 }
 
 const EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
@@ -50,7 +51,7 @@ const validateAdults = (value: string) =>
 const validateChildren = (value: string) =>
   validateWholeNumber(value, 0, 20, "Number of children");
 
-export default function BookTrampModal({ defaultView } : BookTrampProps) {
+export default function BookTrampModal({ defaultView, className } : BookTrampProps) {
   const modalState = useOverlayState();
   // Which tramp is currently chosen in the tabs, this is booked when the form is submitted
   const [selectedTramp, setSelectedTramp] = useState<number>(defaultView || 0);
@@ -83,7 +84,7 @@ export default function BookTrampModal({ defaultView } : BookTrampProps) {
 
   return (
     <Modal>
-      <Button onPress={modalState.open}>Book Tramp</Button>
+      <Button className={`${className}`} onPress={modalState.open}>Book Tramp</Button>
       <Modal.Backdrop isOpen={modalState.isOpen} onOpenChange={modalState.setOpen}>
         <Modal.Container size="lg">
           <Modal.Dialog>
@@ -153,7 +154,7 @@ export default function BookTrampModal({ defaultView } : BookTrampProps) {
                   <FieldError />
                 </TextField>
 
-                <div className="flex gap-4 w-full">
+                <div className="flex gap-4 w-full flex-col sm:flex-row">
                   <TextField
                     className="w-full"
                     isRequired
