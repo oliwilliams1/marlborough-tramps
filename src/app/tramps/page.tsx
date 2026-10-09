@@ -16,8 +16,6 @@ import { Button } from "@heroui/react";
 export default function Tramps() {
   const [selectedTramp, setSelectedTramp] = useState<number>(0);
 
-  const [emblaRef] = useEmblaCarousel({loop: false, duration: 50}, [Autoplay({delay: 7500})]);
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slides, setSlides] = useState(tramps[0].images);
   
@@ -40,15 +38,27 @@ export default function Tramps() {
   return (
     <main>
       <Header />
-        <div className="w-full h-[100vh] overflow-hidden" ref={emblaRef}>
-          <div className="flex h-full">
-            <div className="flex-[0_0_100%] min-w-0 bg-blue-100" />
-            <div className="flex-[0_0_100%] min-w-0 bg-blue-300" />
-            <div className="flex-[0_0_100%] min-w-0 bg-blue-500" />
-            <div className="flex-[0_0_100%] min-w-0 bg-blue-700" />
+        
+        <section className="bg-gray-800 px-6 pt-20 py-16 text-center text-white">
+
+          <h1 className="mt-8 text-4xl font-bold tracking-tight sm:text-5xl">
+            Tramps
+          </h1>
+
+        </section>
+
+        <section className="mx-auto max-w-6xl px-6 py-12">
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="text-2xl font-bold sm:text-3xl">
+              Tramp selector
+            </h2>
+
+            <p className="mt-4 leading-7 text-gray-600">
+              Choose a tramp and see more information about it, including a gallery of images.
+              You can also book a tramp directly from this page.
+            </p>
           </div>
-        </div>
-        <section className="h-36 bg-gray-200" />
+        </section>
 
         {/* Tramp information */}
         <section className="relative flex w-full h-[calc(100vh-6rem)]">
@@ -90,7 +100,7 @@ export default function Tramps() {
                 </div>
               </div>
 
-              {/* Controlled for carasoul */}
+              {/* Control for carousel */}
               <div className="relative flex w-full h-[4rem] bg-black opacity-70 mt-[-4rem] pt-3 z-4">
                 <div className="w-1/2 h-full p-3 pl-20 pt-0">
                   <Button className="p-2.5 bg-[rgb(8,4,4)] border-2 rounded-full" isIconOnly onClick={handlePrevious}>

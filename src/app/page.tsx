@@ -1,25 +1,45 @@
 "use client"
 
-import { useState } from "react";
+import { Card, Tabs, Chip, Button } from "@heroui/react"
 
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 
 import Header from "./components/header"
 import Footer from "./components/footer"
-import { Card, Tabs, Chip, Button } from "@heroui/react"
-
+import { DownArrowIcon } from "./utils/icons";
 import { tramps, gearPersonalEquipmentList, gearCookingEquipmentList } from "./utils/data";
 
+
+
 export default function Home() {
+  // Create a reference for the carasoul to use
   const [emblaRef] = useEmblaCarousel({loop: false, duration: 50}, [Autoplay({delay: 7500})])
-  const [currentTramp, setCurrentTramp] = useState<number>(0);
   
+  // Scrolls down to the element with the id "scroll-to" with a smooth animation.
+  const scrollDown = () => {
+    const targetSection = document.getElementById("scroll-to");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Header />
 
-         <div className="w-full h-[100vh] overflow-hidden" ref={emblaRef}>
+        {/* Text and stuff ontop of the carasoul */}
+        <div className="absolute w-full h-screen bg-black/30 z-10 flex flex-col justify-center items-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white text-center">Marlborough Tramps</h1>
+          <h2 className="mt-4 text-lg md:text-2xl text-white text-center">A New Zealand Favourite</h2>
+          <DownArrowIcon 
+            className="w-6 h-6 mt-8 cursor-pointer" 
+            onClick={scrollDown} // On click call the scrollDown function, which schrolls down!
+            aria-label="Scroll down"
+          />
+        </div>
+        
+        <div className="w-full h-[100vh] overflow-hidden" ref={emblaRef}>
           <div className="flex h-full">
             {/* All slides are a div with a background image */}
             <img className="flex-[0_0_100%] min-w-0 object-cover object-center" src="/1.webp" alt="Trail" />
@@ -30,7 +50,7 @@ export default function Home() {
         </div>
 
       <main>
-        <section className="py-10 border-b border-gray-200">
+        <section className="py-10 border-b border-gray-200" id="scroll-to">
           <div className="mx-auto max-w-6xl px-6">
             <h2 className="text-xl font-bold mb-4">About</h2>
             <p>lorem ipsum dolor sit amet consectetur adipiscing elit dolore non amet expedita nulla vel soluta dolorum cumque quo eos voluptate officia exercitation distinctio veniam voluptate dolore elit omnis quo omnis et deleniti culpa dolores facere enim velit est facilis lorem ut et labore sunt omnis nobis qui duis cum eiusmod distinctio est voluptatum dolor eum qui nostrud id id animi esse harum blanditiis corrupti cillum quod nam quod excepturi id placeat expedita facere placeat quo consequat excepturi molestias fugiat est et esse quos libero pariatur officia deserunt sunt maxime dolor pariatur ducimus culpa.</p>

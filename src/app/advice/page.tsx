@@ -97,6 +97,7 @@ export default function Tramps() {
           </p>
         </div>
       </section>
+      
       <Footer />
     </main>
   )
