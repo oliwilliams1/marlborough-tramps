@@ -62,26 +62,12 @@ export default function Home() {
             <h2 className="text-xl font-bold mb-4">View our tramps</h2>
             <Tabs className="w-full" orientation="horizontal">
               <Tabs.ListContainer>
-                {/* Desktop: horizontal */}
                 <Tabs.List
-                  className="hidden lg:flex w-full"
+                  className="flex w-full flex-col lg:flex-row"
                   aria-label="Options"
                 >
                   {tramps.map((tramp, index) => (
-                    <Tabs.Tab id={index} key={index}>
-                      {tramp.name}
-                      <Tabs.Indicator />
-                    </Tabs.Tab>
-                  ))}
-                </Tabs.List>
-
-                {/* Mobile/tablet: vertical */}
-                <Tabs.List
-                  className="flex lg:hidden w-full flex-col"
-                  aria-label="Options"
-                >
-                  {tramps.map((tramp, index) => (
-                    <Tabs.Tab id={index} key={index}>
+                    <Tabs.Tab id={String(index)} key={index}>
                       {tramp.name}
                       <Tabs.Indicator />
                     </Tabs.Tab>
@@ -94,7 +80,7 @@ export default function Home() {
                 {tramps.map((tramp, index) => (
                   <Tabs.Panel
                     className="w-full p-0 pb-2"
-                    id={index}
+                    id={String(index)}
                     key={index}
                   >
                     <Card className="w-full">
@@ -127,14 +113,14 @@ export default function Home() {
               </div>
 
               {/* Button */}
-              <Button
-                size="sm"
-                className="ml-auto mt-4 flex justify-center"
-              >
-                <a href="/advice">
-                  See more
-                </a>
-              </Button>
+              <a href="/advice">
+                <Button
+                  size="sm"
+                  className="ml-auto mt-4 flex justify-center"
+                >
+                    See more
+                </Button>
+              </a>
 
             </Tabs>
 
@@ -173,11 +159,11 @@ export default function Home() {
               <img src="6.webp" alt="Cooking Equipment" className="w-132 rounded-2xl object-cover object-center shadow-sm lg:block" />
             </div>
 
-            <Button size="lg" className="w-full sm:w-fit flex justify-center mt-6 sm:mt-8">
-              <a href="/advice">
-                Further Advice
-              </a>
-            </Button>
+            <a href="/advice">
+              <Button size="lg" className="w-full sm:w-fit flex justify-center mt-6 sm:mt-8">
+                  Further Advice
+              </Button>
+            </a>
           </div>
         </section>
 

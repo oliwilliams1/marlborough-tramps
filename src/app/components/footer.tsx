@@ -54,7 +54,7 @@ export default function Footer() {
                 <p>5 Stephenson St</p>
                 <p>Blenheim</p>
                 <p>Cell:&nbsp;
-                  <Link href="tel:021 578 01" className="text-white">
+                  <Link href="tel:02157801" className="text-white">
                     021 578 01
                     <Link.Icon />
                   </Link>
@@ -66,7 +66,7 @@ export default function Footer() {
                 <p>173 Waikawa Road</p>
                 <p>Picton</p>
                 <p>Cell:&nbsp;
-                  <Link href="tel:021 573 6558" className="text-white">
+                  <Link href="tel:0215736558" className="text-white">
                     021 573 6558
                     <Link.Icon />
                   </Link>
