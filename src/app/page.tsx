@@ -56,7 +56,7 @@ export default function Home() {
         <section className="py-10 border-b border-gray-200" id="scroll-to">
           <div className="mx-auto max-w-6xl px-6">
             <h2 className="text-xl font-bold mb-4">About</h2>
-            <p>lorem ipsum dolor sit amet consectetur adipiscing elit dolore non amet expedita nulla vel soluta dolorum cumque quo eos voluptate officia exercitation distinctio veniam voluptate dolore elit omnis quo omnis et deleniti culpa dolores facere enim velit est facilis lorem ut et labore sunt omnis nobis qui duis cum eiusmod distinctio est voluptatum dolor eum qui nostrud id id animi esse harum blanditiis corrupti cillum quod nam quod excepturi id placeat expedita facere placeat quo consequat excepturi molestias fugiat est et esse quos libero pariatur officia deserunt sunt maxime dolor pariatur ducimus culpa.</p>
+            <p>Marlborough Tramps is the go-to destination for hiking enthusiasts around the world, offering a wide range of trails for all skill levels. We offer 3 tramps that test different aspects of hiking ability. Wairuai Lagoons is amongst the most popular for its breath-taking scenery and destination. We were established in 1967 under the Marlborough Family and have been committed to providing an exceptional hiking experience for all our visitors.</p>
           </div>
         </section>
 

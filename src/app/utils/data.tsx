@@ -31,7 +31,7 @@ Grade: Walking track — virtually flat (not recommended after heavy rain as sur
 export const tramps: TrampCardInfo[] = [
   {
     name: "Nydia Track",
-    description: "Description for Tramp 1.",
+    description: "Our first tramp with a beautiful coastline",
     longDescription: nydiaTrackText,
     difficulty: "Medium",
     distanceKm: 8.5,
@@ -47,7 +47,7 @@ export const tramps: TrampCardInfo[] = [
   },
   {
     name: "Quail Stream",
-    description: "Description for Tramp 2.",
+    description: "A scenic loop trail through the forest",
     longDescription: quailStreamText,
     difficulty: "Medium",
     distanceKm: 8.5,
@@ -63,7 +63,7 @@ export const tramps: TrampCardInfo[] = [
   },
   {
     name: "Wairau Lagoons",
-    description: "Description for Tramp 3.",
+    description: "A unique estuary experience with diverse wildlife",
     longDescription: wairauLagoonsText,
     difficulty: "Easy",
     distanceKm: 7,
