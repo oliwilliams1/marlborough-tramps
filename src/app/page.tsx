@@ -1,5 +1,6 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { Card, Tabs, Chip, Button } from "@heroui/react"
 
 import useEmblaCarousel from 'embla-carousel-react'
@@ -8,11 +9,13 @@ import Autoplay from 'embla-carousel-autoplay'
 import Header from "./components/header"
 import Footer from "./components/footer"
 import { DownArrowIcon } from "./utils/icons";
-import { tramps, gearPersonalEquipmentList, gearCookingEquipmentList } from "./utils/data";
+import { tramps, gearPersonalEquipmentList } from "./utils/data";
 
 
 
 export default function Home() {
+  const router = useRouter()
+
   // Create a reference for the carasoul to use
   const [emblaRef] = useEmblaCarousel({loop: false, duration: 50}, [Autoplay({delay: 7500})])
   
@@ -113,14 +116,13 @@ export default function Home() {
               </div>
 
               {/* Button */}
-              <a href="/advice">
-                <Button
-                  size="sm"
-                  className="ml-auto mt-4 flex justify-center"
-                >
-                    See more
-                </Button>
-              </a>
+              <Button
+                onClick={() => router.push("/tramps")}
+                size="sm"
+                className="ml-auto mt-4 flex justify-center"
+              >
+                See more
+              </Button>
 
             </Tabs>
 
@@ -159,11 +161,13 @@ export default function Home() {
               <img src="6.webp" alt="Cooking Equipment" className="w-132 rounded-2xl object-cover object-center shadow-sm lg:block" />
             </div>
 
-            <a href="/advice">
-              <Button size="lg" className="w-full sm:w-fit flex justify-center mt-6 sm:mt-8">
-                  Further Advice
-              </Button>
-            </a>
+            <Button
+              onClick={() => router.push("/advice")}
+              size="lg"
+              className="w-full sm:w-fit mt-6 sm:mt-8"
+            >
+              Further Advice
+            </Button>
           </div>
         </section>
 
