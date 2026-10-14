@@ -34,7 +34,7 @@ export const tramps: TrampCardInfo[] = [
     description: "Our first tramp with a beautiful coastline",
     longDescription: nydiaTrackText,
     difficulty: "Medium",
-    distanceKm: 8.5,
+    distanceKm: 27,
     keyFeatures: [
       "Great views and varied track conditions",
       "Overnight stop at Nydia Bay",

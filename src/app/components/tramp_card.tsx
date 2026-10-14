@@ -1,5 +1,4 @@
 import { Card, Chip, Button } from "@heroui/react";
-import { TrampCardInfo } from "../utils/types";
 import BookTrampModal from "./book_tramp_modal";
 import { tramps } from "../utils/data";
 
