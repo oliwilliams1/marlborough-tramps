@@ -33,7 +33,7 @@ export const tramps: TrampCardInfo[] = [
     name: "Nydia Track",
     description: "Our first tramp with a beautiful coastline",
     longDescription: nydiaTrackText,
-    difficulty: "Medium",
+    difficulty: "Hard",
     distanceKm: 27,
     keyFeatures: [
       "Great views and varied track conditions",
@@ -66,7 +66,7 @@ export const tramps: TrampCardInfo[] = [
     description: "A unique estuary experience with diverse wildlife",
     longDescription: wairauLagoonsText,
     difficulty: "Easy",
-    distanceKm: 7,
+    distanceKm: 8,
     keyFeatures: [
       "Richness and unique beauty of a large estuary",
       "Many species of birds nest here",
