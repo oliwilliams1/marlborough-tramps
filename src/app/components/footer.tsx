@@ -97,7 +97,6 @@ export default function Footer() {
       </div>
       <div className="max-w-[1400px] w-full px-16 mx-auto text-white text-center sm:text-left">
         <p>&copy; Copyright 2026 Marlborough Tramps</p>
-        <p>All Rights Reserved.</p>
       </div>
     </footer>
   );

@@ -72,7 +72,6 @@ export const tramps: TrampCardInfo[] = [
       "Many species of birds nest here",
     ],
     images: [
-      "WAI-1.webp",
       "WAI-2.webp",
       "WAI-3.webp",
     ]
